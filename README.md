@@ -16,8 +16,9 @@ you may hardcode the username & password into the beginning of this script.
 # Installation
 - Copy to **libexec** or other appropriate dir
 - set executable using **chmod +x**
-- make sure required ODBC support is available
+- make sure required ODBC support is available for perl
 	- e.g. **apt install libdbd-odbc-perl** on ubuntu
+- make sure appropriate MSSQL ODBC-driver is available (see https://docs.microsoft.com/de-de/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
 
 # Usage
 	check_mssql_sproc_params -H HOSTNAME -p PROCEDURE -d database -u user -P password -w <warn> -c <crit>
