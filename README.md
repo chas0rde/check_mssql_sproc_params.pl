@@ -13,6 +13,12 @@ things - 1. Set \$USERx\$ in resource.cfg to the password - this will be passed 
 not be visible from the web console or 2. If you have a universal SQL login for all of your Nagios queries, then
 you may hardcode the username & password into the beginning of this script.
 
+# Installation
+- Copy to **libexec** or other appropriate dir
+- set executable using **chmod +x**
+- make sure required ODBC support is available
+	- e.g. **apt install libdbd-odbc-perl** on ubuntu
+
 # Usage
 	check_mssql_sproc_params -H HOSTNAME -p PROCEDURE -d database -u user -P password -w <warn> -c <crit>
 
